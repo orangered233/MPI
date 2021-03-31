@@ -1,10 +1,10 @@
-all: compare_bcast
+all: avg
 
-compare_bcast: compare_bcast.c
-	mpicc compare_bcast.c -o run
+avg: avg.c
+	mpicc avg.c -o run
 
 clean:
 	rm -rf run
 
 fire:
-	mpirun -n 10 ./run 1000000 10
+	mpirun -n 10 ./run 10000
