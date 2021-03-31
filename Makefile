@@ -1,7 +1,7 @@
 all: avg
 
-avg: avg.c
-	mpicc avg.c -o run
+avg: reduce_stddev.c
+	mpicc reduce_stddev.c -o run
 
 clean:
 	rm -rf run
