@@ -1,0 +1,10 @@
+all: random_walk
+
+random_walk: random_walk.cpp
+	mpic++ random_walk.cpp -o run
+
+clean:
+	rm -rf run
+
+fire:
+	mpirun -n 10 ./run 100 500 20
